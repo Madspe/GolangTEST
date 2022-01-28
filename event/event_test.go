@@ -5,10 +5,17 @@ package event
 
 import "testing"
 
-func Put(t *testing.T) {
+func TestPut(t *testing.T) {
     // Hva forventer jeg?
     wanted := "[kylling rev korn ---\\ \\_korn_/ _________________/---]"
-    got := Put("rev") // Hva fikk jeg?
+    got := Put("korn") // Hva fikk jeg?
+    if got != wanted {
+             t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
+    }
+func TestPutIØst(t *testing.T) {
+    // Hva forventer jeg?
+    wanted := "[kylling rev korn ---\\ \\__/ _________________/---korn]"
+    got := Put("korn") // Hva fikk jeg?
     if got != wanted {
              t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
     }
