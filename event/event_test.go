@@ -7,10 +7,32 @@ import "testing"
 
 func TestPut(t *testing.T) {
     // Hva forventer jeg?
-    wanted := "[kylling rev korn ---\\ \\_korn_/ _________________/---]"
-    got := Put("korn") // Hva fikk jeg?
+    wanted := "[kylling rev korn ---\\ \\_hs_/ _________________/---]"
+    got := Put("hs") // Hva fikk jeg?
     if got != wanted {
-             t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
+        t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
+    }
+
+
+}
+
+func TestPut2(t *testing.T) {
+    // Hva forventer jeg?
+    wanted := "[kylling rev korn ---\\ \\__/ _________________/---hs]"
+    got := Put2("hs") // Hva fikk jeg?
+    if got != wanted {
+        t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
+    }
+
+
+}
+
+func TestCrossriver(t *testing.T) {
+    // Hva forventer jeg?
+    wanted := "[kylling rev korn ---\\  _________________\\__//---hs]"
+    got := Crossriver("hs") // Hva fikk jeg?
+    if got != wanted {
+        t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
     }
 
 
