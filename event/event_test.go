@@ -12,11 +12,6 @@ func TestPut(t *testing.T) {
     if got != wanted {
              t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
     }
-func TestPutIØst(t *testing.T) {
-    // Hva forventer jeg?
-    wanted := "[kylling rev korn ---\\ \\__/ _________________/---korn]"
-    got := Put("korn") // Hva fikk jeg?
-    if got != wanted {
-             t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
-    }
+
+
 }

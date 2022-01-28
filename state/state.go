@@ -8,4 +8,9 @@ func ViewState() string {
 }
 
 func ViewState2() string {
-    return "[kylling rev korn  ---\\ \\_hs_/ _________________/---]"}
+    return "[kylling rev korn  ---\\ \\_hs_/ _________________/---]"
+    }
+
+func viewState3() string {
+    return "[kylling rev korn  ---\\ \\__/ _________________/---hs]"
+    }
